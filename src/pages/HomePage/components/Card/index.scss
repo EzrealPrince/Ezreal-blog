@@ -1,0 +1,85 @@
+.blog-card {
+    position: relative;
+    height: 380px;
+    margin: 15px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #fff;
+    .bgimg {
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+        transition: all .6s ease;
+        &:hover {
+            cursor: pointer;
+            .b-c-img {
+                transform: scale(1.2);
+            }
+            filter: blur(1px);
+            &:after{
+                content: "";
+                width:100%;
+                height:100%;
+                position: absolute;
+                left:0;
+                top:0;
+                background: rgba(31, 31, 31, .3);
+                z-index: 1;
+            }
+        }
+        &:hover + .b-c-intro {
+            opacity: 1;
+            top: 0;
+        }
+        .b-c-img {
+            background-size: cover;
+            height: 100%;
+            transition: all .6s ease;
+        }
+    }
+    .b-c-intro {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        color: #fff;
+        pointer-events: none;
+        opacity: 0;
+        transition: all .6s ease;
+        p {
+            height: 100%;
+            padding: 40px 28px;
+        }
+    }
+    .b-c-title {
+        z-index: 2;
+        padding: 10px 15px;
+        position: relative;
+    }
+    .b-c-footer {
+        position: absolute;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        line-height: 50px;
+        .icon {
+            margin: 0 15px 0 10px;
+        }
+    }
+    .b-c-left-bg, .b-c-right-bg {
+        position: absolute;
+        bottom: 75px;
+        left: -20%;
+        height: 70px;
+        width: 140%;
+        transform: rotate(13deg);
+        background: #fff;
+    }
+    .b-c-right-bg {
+        transform: rotate(-13deg);
+    }
+}

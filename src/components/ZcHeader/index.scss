@@ -1,0 +1,33 @@
+header {
+    height: 70px;
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+    margin-bottom: 5px;
+    .header-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+        font-size: 17px;
+        font-family: serif;
+        font-weight: 800;
+        line-height: 70px;
+    }
+    .menu {
+        display: flex;
+        width: 240px;
+        justify-content: space-between;
+        line-height: 70px;
+        div:hover {
+            cursor: pointer;
+            color: red;
+        }
+        .search-icon {
+            position: relative;
+            top: 2px;
+        }
+    }
+}

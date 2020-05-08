@@ -1,0 +1,11 @@
+main {
+    background: #f7f7f7;
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 30px 20px;
+    .card-item {
+        float: left;
+    }
+}
