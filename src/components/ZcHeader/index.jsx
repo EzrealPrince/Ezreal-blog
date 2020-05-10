@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import { Icon } from 'antd';
+import {
+    BrowserRouter as Router,
+    Link
+} from "react-router-dom"
 import './index.scss'
 
 export default class ZcHeader extends Component {

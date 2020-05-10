@@ -1,7 +1,7 @@
 import React from 'react'
 import {
     BrowserRouter as Router,
-    Switch,
+    Link,
     Route
 } from "react-router-dom"
 
@@ -14,20 +14,14 @@ import BlogList from '../pages/BlogList'
 
 const Routes = () => (
     <Router>
-        <Switch>
-            <Route path="/">
-                <HomePage />
-            </Route>
-            <Route path="/about">
-                <About />
-            </Route>
-            <Route path="/blogDetail">
-                <BlogDetail />
-            </Route>
-            <Route path="/blogList">
-                <BlogList />
-            </Route>
-        </Switch>
+        <Link to="/about" style={{color:'black'}} />
+        <Link to="/blogDetail" style={{color:'black'}} />
+        {/* <Link to="/blogDetail" style={{color:'black'}} /> */}
+
+        <Route exact path="/" component={HomePage} />
+        <Route path="/about" component={About} />
+        <Route path="/blogDetail" component={BlogDetail} />
+        <Route path="/blogList" component={BlogList} />
     </Router>
 );
 
